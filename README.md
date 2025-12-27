@@ -38,7 +38,3 @@ Is project mein humne ek custom hook `useFetch` banaya hai jo:
    (https://aquamarine-babka-a94bc3.netlify.app/)
 
 run this all link on your dekstop for seeing my hooks pages
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
