@@ -1,69 +1,43 @@
-# Getting Started with Create React App
+# Task 5: React Custom Hooks (useFetch)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ek reusable React custom hook banane ka project jo API se data fetch karne ki process ko handle karta hai, loading aur error states ke saath.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Project Description
+Is project mein humne ek custom hook `useFetch` banaya hai jo:
+* API endpoints se data fetch karta hai.
+* Request ki **Loading state** ko manage karta hai.
+* Potential **Error states** (network error ya malformed data) ko handle karta hai.
 
-### `npm start`
+## Key Features
+* **Custom Hook (`useFetch`)**: Ek generic hook jo kisi bhi URL ke liye kaam karta hai.
+* **Handling States**: Loading spinner aur error messages user ko visual feedback dete hain.
+* **Responsive UI**: Grid layout jo products ko cards mein dikhata hai, jaisa assignment requirements mein tha.
+* **Optimization**: `useEffect` aur `useState` ka efficient upyog.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technical Decisions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Hook Design (`useFetch.js`)
+* **State Management**: Maine teen states (`data`, `loading`, `error`) ka upyog kiya taaki UI component ko hamesha fetch ki current status pata ho.
+* **Fetch API**: JavaScript ki native `fetch()` method ka upyog kiya gaya hai.
+* **Effect Cleanup**: Hook mein cleanup logic add kiya gaya hai taaki memory leaks se bacha ja sake jab component unmount ho.
 
-### `npm test`
+### 2. UI/UX Implementation
+* **Grid Layout**: CSS Grid ka upyog karke ek clean card-based design banaya gaya hai jo images aur information ko structured tarike se dikhata hai.
+* **Loading Feedback**: Jab tak data fetch ho raha hai, tab tak ek placeholder ya spinner dikhaya jata hai.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Run Locally
 
-### `npm run build`
+1. GitHub Repository :
+   ```bash
+   git clone [https://github.com/Prem-8009/react-custom-hook-task.git](https://github.com/Prem-8009/react-custom-hook-task.git)
+2. Netlify Link :
+   '''Chrome
+   netlify link [https://aquamarine-babka-a94bc3.netlify.app/]
+   (https://aquamarine-babka-a94bc3.netlify.app/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+run this all link on your dekstop for seeing my hooks pages
 
 ### `npm run build` fails to minify
 
